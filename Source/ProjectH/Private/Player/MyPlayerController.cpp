@@ -8,7 +8,6 @@
 
 AMyPlayerController::AMyPlayerController()
 {
-	ASC = nullptr;
 }
 
 void AMyPlayerController::BeginPlay()

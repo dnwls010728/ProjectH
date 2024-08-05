@@ -12,6 +12,8 @@ public class ProjectH : ModuleRules
 
 		PrivateDependencyModuleNames.AddRange(new string[] { "GameplayAbilities", "GameplayTags", "GameplayTasks" });
 
+		PublicIncludePathModuleNames.AddRange(new string[] { "ProjectH" });
+
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
 		

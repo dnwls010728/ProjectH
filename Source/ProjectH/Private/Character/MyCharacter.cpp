@@ -4,7 +4,7 @@
 #include "Character/MyCharacter.h"
 
 #include "AbilitySystemComponent.h"
-#include "MyPlayerState.h"
+#include "System/MyPlayerState.h"
 
 AMyCharacter::AMyCharacter()
 {

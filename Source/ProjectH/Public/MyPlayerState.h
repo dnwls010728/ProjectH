@@ -20,8 +20,13 @@ public:
 
 	virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 
+	FORCEINLINE class UAttributeSet* GetAttributeSet() const { return AttributeSet; }
+
 protected:
-	UPROPERTY(EditAnywhere, Category = GAS)
-	TObjectPtr<class UAbilitySystemComponent> ASC;
+	UPROPERTY()
+	TObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent;
+
+	UPROPERTY()
+	TObjectPtr<class UAttributeSet> AttributeSet;
 	
 };

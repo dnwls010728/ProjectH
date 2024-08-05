@@ -3,27 +3,36 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "AbilitySystemInterface.h"
 #include "GameFramework/Character.h"
 #include "MyCharacterBase.generated.h"
 
 UCLASS()
-class PROJECTH_API AMyCharacterBase : public ACharacter
+class PROJECTH_API AMyCharacterBase : public ACharacter, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
 	AMyCharacterBase();
+	
+	virtual void Tick(float DeltaTime) override;
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const override;
+
+	FORCEINLINE class UAttributeSet* GetAttributeSet() const { return AttributeSet; }
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	UPROPERTY()
+	TObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	UPROPERTY()
+	TObjectPtr<class UAttributeSet> AttributeSet;
+
+private:
+	UPROPERTY(EditAnywhere, Category = "Abilities")
+	TArray<TSubclassOf<class UGameplayAbility>> StartupAbilities;
 
 };

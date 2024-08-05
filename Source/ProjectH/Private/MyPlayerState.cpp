@@ -3,14 +3,16 @@
 
 #include "MyPlayerState.h"
 
-#include "AbilitySystemComponent.h"
+#include "AbilitySystem/MyAbilitySystemComponent.h"
 
 AMyPlayerState::AMyPlayerState()
 {
-	ASC = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("ASC"));
+	AbilitySystemComponent = CreateDefaultSubobject<UMyAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
+
+	AttributeSet = CreateDefaultSubobject<UAttributeSet>(TEXT("AttributeSet"));
 }
 
 UAbilitySystemComponent* AMyPlayerState::GetAbilitySystemComponent() const
 {
-	return ASC;
+	return AbilitySystemComponent;
 }

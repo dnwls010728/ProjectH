@@ -6,6 +6,7 @@
 #include "GameFramework/PlayerController.h"
 #include "MyPlayerController.generated.h"
 
+class AMyCharacter;
 class AUser;
 
 UCLASS()
@@ -31,7 +32,7 @@ private:
 
 
 	UPROPERTY()
-	TObjectPtr<AUser> User;
+	TObjectPtr<AMyCharacter> User;
 
 	UFUNCTION()
 	void MoveFunc(const FInputActionValue& value);

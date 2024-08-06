@@ -6,6 +6,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "EnhancedInputComponent.h"
+#include "Character/MyCharacter.h"
 #include "Kismet/KismetMathLibrary.h"
 
 
@@ -21,7 +22,7 @@ void AMyPlayerController::BeginPlay()
 	UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer());
 	check(Subsystem);
 	Subsystem->AddMappingContext(InputContext, 0);
-	User = Cast<AUser>(GetPawn());
+	User = Cast<AMyCharacter>(GetPawn());
 	
 	
 }

@@ -18,5 +18,9 @@ public:
 	AMyCharacter();
 
 	virtual void PossessedBy(AController* NewController) override;
+
+private:
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<class UCameraComponent> CameraComponent;
 	
 };

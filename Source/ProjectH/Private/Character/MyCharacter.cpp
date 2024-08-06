@@ -4,10 +4,15 @@
 #include "Character/MyCharacter.h"
 
 #include "AbilitySystemComponent.h"
+#include "Camera/CameraComponent.h"
+#include "Components/CapsuleComponent.h"
 #include "System/MyPlayerState.h"
 
 AMyCharacter::AMyCharacter()
 {
+	CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComponent"));
+	CameraComponent->SetupAttachment(GetCapsuleComponent());
+	CameraComponent->bUsePawnControlRotation = true;
 }
 
 void AMyCharacter::PossessedBy(AController* NewController)

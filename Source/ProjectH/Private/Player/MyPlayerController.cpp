@@ -6,6 +6,8 @@
 #include "EnhancedInputSubsystems.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "EnhancedInputComponent.h"
+#include "Kismet/KismetMathLibrary.h"
+
 
 AMyPlayerController::AMyPlayerController()
 {
@@ -20,6 +22,7 @@ void AMyPlayerController::BeginPlay()
 	check(Subsystem);
 	Subsystem->AddMappingContext(InputContext, 0);
 	User = Cast<AUser>(GetPawn());
+	
 	
 }
 
@@ -40,7 +43,14 @@ void AMyPlayerController::MoveFunc(const FInputActionValue& value)
 	Dir *= 50.0f;
 
 	auto Movement = User->GetCharacterMovement();
-	Movement->AddInputVector(FVector(Dir.X, Dir.Y, 0.0f));
+
+	FRotator Rotation = GetControlRotation();
+	FVector Forward = UKismetMathLibrary::GetForwardVector(Rotation);
+	FVector Right = UKismetMathLibrary::GetRightVector(Rotation);
+
+	FVector MoveToward = Forward * Dir.X + Right * Dir.Y;
+
+	Movement->AddInputVector(MoveToward);
 
 }
 

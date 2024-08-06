@@ -11,7 +11,7 @@ void AUser::BeginPlay()
 	Managers->Game->Player = this;
 
 	GetCharacterMovement()->bOrientRotationToMovement = true;
-	GetCharacterMovement()->bUseControllerDesiredRotation = false;
+	GetCharacterMovement()->bUseControllerDesiredRotation = true;
 
 	GetCharacterMovement()->RotationRate = FRotator(800.0f, 0.0f, 0.0f);
 

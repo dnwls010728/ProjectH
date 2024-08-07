@@ -7,7 +7,6 @@
 #include "MyPlayerController.generated.h"
 
 class AMyCharacter;
-class AUser;
 
 UCLASS()
 class PROJECTH_API AMyPlayerController : public APlayerController

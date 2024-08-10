@@ -11,13 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09854dd0-271c-4362-ab6e-9681c41c979e" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/ProjectH/Private/Input/MyInputConfig.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectH/Private/MyGameplayTags.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectH/Public/Input/MyInputConfig.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectH/Public/MyGameplayTags.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectH/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectH/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Private/Player/MyPlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectH/Private/Player/MyPlayerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Public/Player/MyPlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectH/Public/Player/MyPlayerController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Input/IMC_PlayerContext.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Input/IMC_PlayerContext.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Input/InputActions/IA_Look.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Input/InputActions/IA_Move.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Public/Character/MyCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectH/Public/Character/MyCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -508,8 +506,19 @@
       <workItem from="1722774176458" duration="1276000" />
       <workItem from="1723020583223" duration="1061000" />
       <workItem from="1723033622022" duration="3657000" />
-      <workItem from="1723113977190" duration="5022000" />
+      <workItem from="1723113977190" duration="5212000" />
+      <workItem from="1723206751448" duration="3598000" />
+      <workItem from="1723280545136" duration="2951000" />
     </task>
+    <task id="LOCAL-00001" summary="FEAT: GAS 관련 추가">
+      <option name="closed" value="true" />
+      <created>1723122034126</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723122034126</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,5 +540,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="FEAT: GAS 관련 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="FEAT: GAS 관련 추가" />
   </component>
 </project>

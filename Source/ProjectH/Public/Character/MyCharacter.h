@@ -19,7 +19,6 @@ class PROJECTH_API AMyCharacter : public AMyCharacterBase
 public:
 	AMyCharacter();
 
-	virtual void PossessedBy(AController* NewController) override;
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
 private:

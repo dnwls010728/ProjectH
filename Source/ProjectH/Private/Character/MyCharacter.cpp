@@ -3,11 +3,8 @@
 
 #include "Character/MyCharacter.h"
 
-#include "AbilitySystemComponent.h"
 #include "EnhancedInputComponent.h"
 #include "Camera/CameraComponent.h"
-#include "Components/CapsuleComponent.h"
-#include "System/MyPlayerState.h"
 
 AMyCharacter::AMyCharacter()
 {
@@ -15,20 +12,6 @@ AMyCharacter::AMyCharacter()
 	CameraComponent->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, FName("head"));
 	
 	CameraComponent->bUsePawnControlRotation = true;
-}
-
-void AMyCharacter::PossessedBy(AController* NewController)
-{
-	Super::PossessedBy(NewController);
-
-	AMyPlayerState* MyPlayerState = GetPlayerState<AMyPlayerState>();
-	check(MyPlayerState);
-
-	AbilitySystemComponent = MyPlayerState->GetAbilitySystemComponent();
-	AbilitySystemComponent->InitAbilityActorInfo(MyPlayerState, this);
-
-	AttributeSet = MyPlayerState->GetAttributeSet();
-	
 }
 
 void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)

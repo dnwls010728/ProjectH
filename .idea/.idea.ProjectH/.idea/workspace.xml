@@ -10,7 +10,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09854dd0-271c-4362-ab6e-9681c41c979e" name="변경" comment="FIX: IK 버그 수정" />
+    <list default="true" id="09854dd0-271c-4362-ab6e-9681c41c979e" name="변경" comment="FIX: IK 버그 수정">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectH/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectH/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/BP_MyCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Characters/BP_MyCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/TempMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/TempMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Private/Character/MyCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectH/Private/Character/MyCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Private/Player/MyPlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectH/Private/Player/MyPlayerController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Public/Character/MyCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectH/Public/Character/MyCharacter.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -505,6 +512,7 @@
       <workItem from="1723280545136" duration="2951000" />
       <workItem from="1723353797451" duration="1624000" />
       <workItem from="1723385926896" duration="516000" />
+      <workItem from="1723471700118" duration="2277000" />
     </task>
     <task id="LOCAL-00001" summary="FEAT: GAS 관련 추가">
       <option name="closed" value="true" />

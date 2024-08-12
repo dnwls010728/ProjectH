@@ -16,8 +16,10 @@ void AMyPlayerController::BeginPlay()
 	check(InputContext);
 	
 	UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer());
-	check(Subsystem);
-	Subsystem->AddMappingContext(InputContext, 0);
+	if (IsValid(Subsystem))
+	{
+		Subsystem->AddMappingContext(InputContext, 0);
+	}
 	
 	
 }

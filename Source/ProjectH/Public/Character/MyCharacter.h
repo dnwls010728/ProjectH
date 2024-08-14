@@ -23,10 +23,10 @@ public:
 
 private:
 	UPROPERTY(EditAnywhere)
-	TObjectPtr<class USpringArmComponent> SpringArmComponent;
+	TObjectPtr<class USpringArmComponent> CameraBoom;
 	
 	UPROPERTY(EditAnywhere)
-	TObjectPtr<class UCameraComponent> CameraComponent;
+	TObjectPtr<class UCameraComponent> FollowCamera;
 
 	UPROPERTY(EditAnywhere)
 	TObjectPtr<UInputAction> MoveAction;

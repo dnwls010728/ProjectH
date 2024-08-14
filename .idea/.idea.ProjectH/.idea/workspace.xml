@@ -10,12 +10,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09854dd0-271c-4362-ab6e-9681c41c979e" name="변경" comment="FIX: IK 버그 수정">
+    <list default="true" id="09854dd0-271c-4362-ab6e-9681c41c979e" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectH/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectH/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/BP_MyCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Characters/BP_MyCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Maps/TempMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/TempMap.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectH/Private/Character/MyCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectH/Private/Character/MyCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Private/Player/MyPlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectH/Private/Player/MyPlayerController.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectH/Public/Character/MyCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectH/Public/Character/MyCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -512,7 +511,9 @@
       <workItem from="1723280545136" duration="2951000" />
       <workItem from="1723353797451" duration="1624000" />
       <workItem from="1723385926896" duration="516000" />
-      <workItem from="1723471700118" duration="2277000" />
+      <workItem from="1723471700118" duration="2999000" />
+      <workItem from="1723635591433" duration="76000" />
+      <workItem from="1723637057696" duration="1560000" />
     </task>
     <task id="LOCAL-00001" summary="FEAT: GAS 관련 추가">
       <option name="closed" value="true" />
@@ -546,7 +547,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723386450653</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="FEAT: 시점 변경">
+      <option name="closed" value="true" />
+      <created>1723474119416</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723474119416</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,6 +581,7 @@
     <MESSAGE value="FEAT: GAS 제거" />
     <MESSAGE value="FEAT: IK 추가&#10;* 현재 IK 버그 존재" />
     <MESSAGE value="FIX: IK 버그 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIX: IK 버그 수정" />
+    <MESSAGE value="FEAT: 시점 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="FEAT: 시점 변경" />
   </component>
 </project>

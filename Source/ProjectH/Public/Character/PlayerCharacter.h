@@ -13,5 +13,17 @@ UCLASS()
 class PROJECTH_API APlayerCharacter : public ACharacterBase
 {
 	GENERATED_BODY()
+
+public:
+	APlayerCharacter();
+
+	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
+
+protected:
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<class USpringArmComponent> CameraBoom;
+
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<class UCameraComponent> FollowCamera;
 	
 };

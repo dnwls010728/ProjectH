@@ -11,22 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09854dd0-271c-4362-ab6e-9681c41c979e" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/ProjectH/Private/Character/CharacterAnimInstanceBase.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectH/Private/Character/PlayerAnimInstance.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectH/Public/Character/CharacterAnimInstanceBase.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectH/Public/Character/PlayerAnimInstance.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectH/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectH/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_GameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_GameMode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/ABP_MyCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Characters/ABP_MyCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/ABP_Player.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Characters/ABP_Player.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/Animations/BS_PlayerLocomotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Characters/Animations/BS_PlayerLocomotion.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/BP_Player.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Characters/BP_Player.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/Rigs/CR_MyCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Characters/Rigs/CR_MyCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectH/Private/Character/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectH/Private/Character/PlayerCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Private/Manager/GameManager.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Private/Manager/Manager.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Private/Player/MyPlayerController.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectH/Public/Character/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectH/Public/Character/PlayerCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Public/Manager/GameManager.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Public/Manager/Manager.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Public/Player/MyPlayerController.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +70,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../Epic Games/UE_5.4/Engine/Plugins/Animation/LiveLinkHub/Source/LiveLinkHub/Private/LiveLinkHubApplication.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Epic Games/UE_5.4/Engine/Plugins/EnhancedInput/Intermediate/Build/Win64/UnrealEditor/Inc/EnhancedInput/UHT/InputActionValue.generated.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Epic Games/UE_5.4/Engine/Source/Developer/DesktopPlatform/Private/Mac/MacNativeFeedbackContext.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Epic Games/UE_5.4/Engine/Source/Developer/DesktopPlatform/Private/Windows/WindowsNativeFeedbackContext.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Epic Games/UE_5.4/Engine/Source/Developer/TraceInsights/Private/Insights/ViewModels/LogMessage.h" root0="FORCE_HIGHLIGHTING" />
@@ -107,6 +100,7 @@
     <setting file="file://$PROJECT_DIR$/../../Epic Games/UE_5.4/Engine/Source/Runtime/ApplicationCore/Private/Windows/WindowsApplication.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Epic Games/UE_5.4/Engine/Source/Runtime/ApplicationCore/Private/Windows/WindowsPlatformApplicationMisc.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Epic Games/UE_5.4/Engine/Source/Runtime/ApplicationCore/Public/Linux/LinuxApplication.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Epic Games/UE_5.4/Engine/Source/Runtime/Core/Public/Math/MathFwd.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Epic Games/UE_5.4/Engine/Source/Runtime/Core/Public/Math/Rotator.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Epic Games/UE_5.4/Engine/Source/Runtime/Core/Public/Windows/PostWindowsApi.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Epic Games/UE_5.4/Engine/Source/Runtime/Core/Tests/Containers/RingBufferTest.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -618,7 +612,8 @@
       <workItem from="1728387617484" duration="572000" />
       <workItem from="1728647686383" duration="2636000" />
       <workItem from="1728741558102" duration="1727000" />
-      <workItem from="1728798550950" duration="2550000" />
+      <workItem from="1728798550950" duration="5670000" />
+      <workItem from="1728991511493" duration="1023000" />
     </task>
     <task id="LOCAL-00001" summary="FEAT: GAS 관련 추가">
       <option name="closed" value="true" />
@@ -676,7 +671,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723728714099</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="FEAT: 2차 리팩토링">
+      <option name="closed" value="true" />
+      <created>1728801544692</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728801544692</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -730,6 +733,7 @@
     <MESSAGE value="FIX: IK 버그 수정" />
     <MESSAGE value="FEAT: 시점 변경" />
     <MESSAGE value="FEAT: 플레이어 로직 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="FEAT: 플레이어 로직 수정" />
+    <MESSAGE value="FEAT: 2차 리팩토링" />
+    <option name="LAST_COMMIT_MESSAGE" value="FEAT: 2차 리팩토링" />
   </component>
 </project>

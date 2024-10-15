@@ -6,6 +6,7 @@
 #include "Character/CharacterBase.h"
 #include "PlayerCharacter.generated.h"
 
+struct FInputActionValue;
 /**
  * 
  */
@@ -20,10 +21,18 @@ public:
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
 protected:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(VisibleAnywhere)
 	TObjectPtr<class USpringArmComponent> CameraBoom;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(VisibleAnywhere)
 	TObjectPtr<class UCameraComponent> FollowCamera;
+
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<class UInputAction> MoveAction;
+
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<class UInputAction> JumpAction;
+
+	void Move(const FInputActionValue& Value);
 	
 };

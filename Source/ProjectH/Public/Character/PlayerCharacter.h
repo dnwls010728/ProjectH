@@ -6,6 +6,7 @@
 #include "Character/CharacterBase.h"
 #include "PlayerCharacter.generated.h"
 
+class UInputAction;
 struct FInputActionValue;
 /**
  * 
@@ -27,12 +28,23 @@ protected:
 	UPROPERTY(VisibleAnywhere)
 	TObjectPtr<class UCameraComponent> FollowCamera;
 
-	UPROPERTY(EditAnywhere)
-	TObjectPtr<class UInputAction> MoveAction;
+	UPROPERTY(EditAnywhere, Category = "Input")
+	TObjectPtr<UInputAction> MoveAction;
 
-	UPROPERTY(EditAnywhere)
-	TObjectPtr<class UInputAction> JumpAction;
+	UPROPERTY(EditAnywhere, Category = "Input")
+	TObjectPtr<UInputAction> RunAction;
 
+	UPROPERTY(EditAnywhere, Category = "Input")
+	TObjectPtr<UInputAction> JumpAction;
+
+	UPROPERTY(EditAnywhere, Category = "Input")
+	TObjectPtr<UInputAction> InteractAction;
+	
 	void Move(const FInputActionValue& Value);
+	void Run(const FInputActionValue& Value);
+	void Interact(const FInputActionValue& Value);
+
+	UPROPERTY(EditAnywhere)
+	bool bIsInteracting;
 	
 };

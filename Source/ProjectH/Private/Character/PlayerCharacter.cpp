@@ -7,6 +7,7 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 APlayerCharacter::APlayerCharacter()
 {
@@ -29,8 +30,14 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(InputComponent);
 	EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Move);
 
+	EnhancedInputComponent->BindAction(RunAction, ETriggerEvent::Started, this, &APlayerCharacter::Run);
+	EnhancedInputComponent->BindAction(RunAction, ETriggerEvent::Completed, this, &APlayerCharacter::Run);
+
 	EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &APlayerCharacter::Jump);
 	EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &APlayerCharacter::StopJumping);
+
+	EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &APlayerCharacter::Interact);
+	EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Completed, this, &APlayerCharacter::Interact);
 }
 
 void APlayerCharacter::Move(const FInputActionValue& Value)
@@ -42,4 +49,42 @@ void APlayerCharacter::Move(const FInputActionValue& Value)
 
 	AddMovementInput(ForwardDirection, MovementVector.X);
 	AddMovementInput(RightDirection, MovementVector.Y);
+
+	if (bIsInteracting)
+	{
+		const FVector Start = GetActorLocation();
+		const FVector End = Start + GetActorForwardVector() * 100.f;
+
+		FHitResult HitResult;
+		bool bHit = UKismetSystemLibrary::LineTraceSingle(
+			GetWorld(),
+			Start,
+			End,
+			UEngineTypes::ConvertToTraceType(ECC_Visibility),
+			false,
+			TArray<AActor*>{this},
+			EDrawDebugTrace::ForDuration,
+			HitResult,
+			true
+		);
+
+		if (bHit)
+		{
+			AActor* HitActor = HitResult.GetActor();
+			if (HitActor)
+			{
+			}
+		}
+	}
+}
+
+void APlayerCharacter::Run(const FInputActionValue& Value)
+{
+	bool bIsRunning = Value.Get<bool>();
+	GetCharacterMovement()->MaxWalkSpeed = bIsRunning ? 600.f : 300.f;
+}
+
+void APlayerCharacter::Interact(const FInputActionValue& Value)
+{
+	bIsInteracting = Value.Get<bool>();
 }

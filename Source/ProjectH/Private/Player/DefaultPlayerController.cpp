@@ -2,7 +2,7 @@
 
 
 #include "Player/DefaultPlayerController.h"
-
+#include "Engine/LocalPlayer.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 

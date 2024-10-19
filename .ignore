@@ -1,0 +1,11 @@
+/.cache
+/.git
+/.github
+/.idea
+/.vs
+/.vscode
+/Assets
+/Content
+/DerivedDataCache
+/Intermediate
+/Saved

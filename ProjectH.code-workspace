@@ -1,0 +1,1353 @@
+{
+	"folders": [
+		{
+			"name": "ProjectH",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "C:\\Program Files\\Epic Games\\UE_5.4"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "ProjectH Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"Debug",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"Debug",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectH Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"Debug",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"DebugGame",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"DebugGame",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectH Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"DebugGame",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"Development",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"Development",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectH Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"Development",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 Test Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"Test",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 Test Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"Test",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectH Win64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 Test Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"Test",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 Shipping Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"Shipping",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"Shipping",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectH Win64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Win64 Shipping Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"ProjectH",
+					"Win64",
+					"Shipping",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"Debug",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Debug Cook+Deploy",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=Debug",
+					"-ServerConfig=Debug",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"ProjectHEditor Win64 Development Build",
+					"ProjectH Android Debug Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Debug Cook",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=Debug",
+					"-ServerConfig=Debug",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook"
+				],
+				"dependsOn": [
+					"ProjectHEditor Win64 Development Build",
+					"ProjectH Android Debug Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Debug Deploy",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=Debug",
+					"-ServerConfig=Debug",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-DeploySoToDevice",
+					"-SkipCook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"ProjectH Android Debug Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"Debug",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectH Android Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"Debug",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"DebugGame",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android DebugGame Cook+Deploy",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=DebugGame",
+					"-ServerConfig=DebugGame",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"ProjectHEditor Win64 Development Build",
+					"ProjectH Android DebugGame Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android DebugGame Cook",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=DebugGame",
+					"-ServerConfig=DebugGame",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook"
+				],
+				"dependsOn": [
+					"ProjectHEditor Win64 Development Build",
+					"ProjectH Android DebugGame Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android DebugGame Deploy",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=DebugGame",
+					"-ServerConfig=DebugGame",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-DeploySoToDevice",
+					"-SkipCook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"ProjectH Android DebugGame Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"DebugGame",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectH Android DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"DebugGame",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"Development",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Development Cook+Deploy",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=Development",
+					"-ServerConfig=Development",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"ProjectHEditor Win64 Development Build",
+					"ProjectH Android Development Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Development Cook",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=Development",
+					"-ServerConfig=Development",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook"
+				],
+				"dependsOn": [
+					"ProjectHEditor Win64 Development Build",
+					"ProjectH Android Development Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Development Deploy",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=Development",
+					"-ServerConfig=Development",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-DeploySoToDevice",
+					"-SkipCook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"ProjectH Android Development Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"Development",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectH Android Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"Development",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Test Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"Test",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Test Cook+Deploy",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=Test",
+					"-ServerConfig=Test",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"ProjectHEditor Win64 Development Build",
+					"ProjectH Android Test Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Test Cook",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=Test",
+					"-ServerConfig=Test",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook"
+				],
+				"dependsOn": [
+					"ProjectHEditor Win64 Development Build",
+					"ProjectH Android Test Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Test Deploy",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=Test",
+					"-ServerConfig=Test",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-DeploySoToDevice",
+					"-SkipCook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"ProjectH Android Test Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Test Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"Test",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectH Android Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Test Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"Test",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Shipping Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"Shipping",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Shipping Cook+Deploy",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=Shipping",
+					"-ServerConfig=Shipping",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"ProjectHEditor Win64 Development Build",
+					"ProjectH Android Shipping Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Shipping Cook",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=Shipping",
+					"-ServerConfig=Shipping",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook"
+				],
+				"dependsOn": [
+					"ProjectHEditor Win64 Development Build",
+					"ProjectH Android Shipping Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Shipping Deploy",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=D:/UE/ProjectH/ProjectH.uproject",
+					"-Project=D:/UE/ProjectH/ProjectH.uproject",
+					"-noP4",
+					"-ClientConfig=Shipping",
+					"-ServerConfig=Shipping",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-DeploySoToDevice",
+					"-SkipCook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"ProjectH Android Shipping Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Shipping Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"Shipping",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectH Android Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectH Android Shipping Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"ProjectH",
+					"Android",
+					"Shipping",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectHEditor Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectHEditor",
+					"Win64",
+					"Debug",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectHEditor Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectHEditor",
+					"Win64",
+					"Debug",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectHEditor Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectHEditor Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"ProjectHEditor",
+					"Win64",
+					"Debug",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectHEditor Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectHEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectHEditor Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectHEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectHEditor Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectHEditor Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"ProjectHEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectHEditor Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectHEditor",
+					"Win64",
+					"Development",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectHEditor Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"ProjectHEditor",
+					"Win64",
+					"Development",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProjectHEditor Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"label": "ProjectHEditor Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"ProjectHEditor",
+					"Win64",
+					"Development",
+					"D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch ProjectH (Debug)",
+				"request": "launch",
+				"program": "D:\\UE\\ProjectH\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+				"preLaunchTask": "ProjectH Win64 Debug Build",
+				"args": [
+				],
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch ProjectH (DebugGame)",
+				"request": "launch",
+				"program": "D:\\UE\\ProjectH\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+				"preLaunchTask": "ProjectH Win64 DebugGame Build",
+				"args": [
+				],
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch ProjectH (Development)",
+				"request": "launch",
+				"program": "D:\\UE\\ProjectH\\Binaries\\Win64\\UnrealGame.exe",
+				"preLaunchTask": "ProjectH Win64 Development Build",
+				"args": [
+				],
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch ProjectH (Test)",
+				"request": "launch",
+				"program": "D:\\UE\\ProjectH\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+				"preLaunchTask": "ProjectH Win64 Test Build",
+				"args": [
+				],
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch ProjectH (Shipping)",
+				"request": "launch",
+				"program": "D:\\UE\\ProjectH\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+				"preLaunchTask": "ProjectH Win64 Shipping Build",
+				"args": [
+				],
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch ProjectHEditor (Debug)",
+				"request": "launch",
+				"program": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
+				"preLaunchTask": "ProjectHEditor Win64 Debug Build",
+				"args": [
+					"D:\\UE\\ProjectH\\ProjectH.uproject"
+				],
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch ProjectHEditor (DebugGame)",
+				"request": "launch",
+				"program": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
+				"preLaunchTask": "ProjectHEditor Win64 DebugGame Build",
+				"args": [
+					"D:\\UE\\ProjectH\\ProjectH.uproject"
+				],
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch ProjectHEditor (Development)",
+				"request": "launch",
+				"program": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+				"preLaunchTask": "ProjectHEditor Win64 Development Build",
+				"args": [
+					"D:\\UE\\ProjectH\\ProjectH.uproject"
+				],
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.4"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Win64 Development Build",
+				"program": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Build\\BatchFiles\\RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=D:\\UE\\ProjectH\\ProjectH.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "integratedTerminal",
+				"stopAtEntry": false,
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.4"
+			}
+		]
+	}
+}

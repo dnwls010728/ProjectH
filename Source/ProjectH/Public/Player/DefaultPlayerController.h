@@ -6,9 +6,7 @@
 #include "GameFramework/PlayerController.h"
 #include "DefaultPlayerController.generated.h"
 
-/**
- * 
- */
+
 UCLASS()
 class PROJECTH_API ADefaultPlayerController : public APlayerController
 {
@@ -23,5 +21,6 @@ protected:
 
 	UPROPERTY(EditAnywhere)
 	TObjectPtr<class UInputMappingContext> InputMappingContext;
-	
+
+
 };

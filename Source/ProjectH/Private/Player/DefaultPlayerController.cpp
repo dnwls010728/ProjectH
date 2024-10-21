@@ -8,6 +8,7 @@
 
 ADefaultPlayerController::ADefaultPlayerController()
 {
+
 }
 
 void ADefaultPlayerController::BeginPlay()

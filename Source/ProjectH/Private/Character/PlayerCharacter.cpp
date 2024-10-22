@@ -8,6 +8,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Components/CapsuleComponent.h"
 
 APlayerCharacter::APlayerCharacter()
 {
@@ -21,6 +22,7 @@ APlayerCharacter::APlayerCharacter()
 
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComponent"));
 	FollowCamera->SetupAttachment(CameraBoom);
+	GetCapsuleComponent()->SetCollisionProfileName(TEXT("Player"));
 }
 
 void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)

@@ -5,10 +5,12 @@
 #include "Engine/LocalPlayer.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "Components/CapsuleComponent.h"
 
 ADefaultPlayerController::ADefaultPlayerController()
 {
-
+	auto temp = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
+	RootComponent = temp;
 }
 
 void ADefaultPlayerController::BeginPlay()

@@ -16,6 +16,7 @@ class PROJECTH_API UWidgetAssets : public UDataAsset
 {
 	GENERATED_BODY()
 	
+public:
 	UPROPERTY(EditAnywhere)
 	TMap<FString, TObjectPtr<UWidgetBase>> Widgets;
 };

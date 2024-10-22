@@ -4,9 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "Data/WidgetAssets.h"
 #include "WidgetManager.generated.h"
 
-class UPopupBase;
+class UWidgetBase;
 
 /**
  * 
@@ -19,11 +20,12 @@ class PROJECTH_API UWidgetManager : public UObject
 
 
 public:
-	inline const TObjectPtr<UPopupBase> GetPopupWidget() {
-		return PopupWidgets;
+	inline const TMap<FString, TObjectPtr<UWidgetBase>> GetPopupWidget() {
+		return PopupWidgets->Widgets;
 	}
 
 private:
 	UPROPERTY()
-	TObjectPtr<UPopupBase> PopupWidgets;
+	TObjectPtr<UWidgetAssets> PopupWidgets;
+
 };

@@ -2,10 +2,10 @@
 
 
 #include "Managers/WidgetManager.h"
-#include "Widgets/Popup/PopupBase.h"
+#include "Data/WidgetAssets.h"
 
 UWidgetManager::UWidgetManager() {
-	PopupWidgets = Cast<UPopupBase>(StaticLoadObject(UPopupBase::StaticClass(),
+	PopupWidgets = Cast<UWidgetAssets>(StaticLoadObject(UWidgetAssets::StaticClass(),
 													 nullptr,
 													 TEXT("/Script/ProjectH.WidgetAssets'/Game/Data/PopupWidgets.PopupWidgets'")));
 

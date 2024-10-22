@@ -4,12 +4,12 @@
 #include "Systems/Managers.h"
 #include "Engine/World.h"
 
-Managers::Managers()
-{
+Managers::Managers() {
+
 }
 
-Managers::~Managers()
-{
+Managers::~Managers() {
+
 }
 
 void Managers::InitPlay() {

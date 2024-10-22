@@ -9,13 +9,14 @@
 
 ADefaultPlayerController::ADefaultPlayerController()
 {
-	auto temp = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
-	RootComponent = temp;
+	Capsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
+	RootComponent = Capsule;
 }
 
 void ADefaultPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
+	Capsule->SetCollisionProfileName(FName(TEXT("OverlapAll")));
 
 	if (InputMappingContext)
 	{

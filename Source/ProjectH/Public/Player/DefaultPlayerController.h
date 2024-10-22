@@ -6,6 +6,7 @@
 #include "GameFramework/PlayerController.h"
 #include "DefaultPlayerController.generated.h"
 
+class UCapsuleComponent;
 
 UCLASS()
 class PROJECTH_API ADefaultPlayerController : public APlayerController
@@ -22,5 +23,6 @@ protected:
 	UPROPERTY(EditAnywhere)
 	TObjectPtr<class UInputMappingContext> InputMappingContext;
 	
-	
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<UCapsuleComponent> Capsule;
 };

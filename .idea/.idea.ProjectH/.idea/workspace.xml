@@ -12,8 +12,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09854dd0-271c-4362-ab6e-9681c41c979e" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/Characters/Rigs/IK_Player.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectH/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectH/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Private/Objects/InteractableObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectH/Private/Objects/InteractableObject.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/ABP_MyCharacter.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/ABP_Player.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Characters/ABP_Player.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/BP_MyCharacter.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/Rigs/CR_MyCharacter.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/Rigs/CR_Player.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Characters/Rigs/CR_Player.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/Rigs/IK_MyCharacter.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Mixamo/XBot/Rigs/RTG_XBot.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mixamo/XBot/Rigs/RTG_XBot.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Private/Character/MyAnimInstance.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Private/Character/MyCharacter.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Private/Character/MyCharacterBase.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Public/Character/MyAnimInstance.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Public/Character/MyCharacter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectH/Public/Character/MyCharacterBase.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -631,6 +644,7 @@
       <workItem from="1729575355233" duration="13000" />
       <workItem from="1729575387722" duration="233000" />
       <workItem from="1729575642032" duration="496000" />
+      <workItem from="1729687236549" duration="302000" />
     </task>
     <task id="LOCAL-00001" summary="FEAT: GAS 관련 추가">
       <option name="closed" value="true" />

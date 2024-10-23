@@ -7,6 +7,7 @@
 #include "GimmickBase.generated.h"
 
 class UCapsuleComponent;
+class UStaticMeshComponent;
 
 UCLASS()
 class PROJECTH_API AGimmickBase : public AActor
@@ -37,12 +38,15 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TObjectPtr<UCapsuleComponent> Capsule;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TObjectPtr<UStaticMeshComponent> Mesh;
 
 	GimmickTypes Type_;
 
-
+	UFUNCTION()
+	void OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 };

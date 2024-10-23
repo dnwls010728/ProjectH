@@ -33,4 +33,4 @@ private:
 	Managers* MGR;
 };
 
-#define Managers AGMB::GetManager()
+//#define Managers AGMB::GetManager()

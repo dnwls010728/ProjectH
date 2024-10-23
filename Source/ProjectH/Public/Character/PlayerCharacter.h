@@ -43,8 +43,5 @@ protected:
 	void Move(const FInputActionValue& Value);
 	void Run(const FInputActionValue& Value);
 	void Interact(const FInputActionValue& Value);
-
-	UPROPERTY(EditAnywhere)
-	bool bIsInteracting;
 	
 };

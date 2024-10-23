@@ -38,8 +38,8 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &APlayerCharacter::Jump);
 	EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &APlayerCharacter::StopJumping);
 
-	EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &APlayerCharacter::Interact);
-	EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Completed, this, &APlayerCharacter::Interact);
+	EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Interact);
+	// EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Completed, this, &APlayerCharacter::Interact);
 }
 
 void APlayerCharacter::Move(const FInputActionValue& Value)
@@ -51,33 +51,6 @@ void APlayerCharacter::Move(const FInputActionValue& Value)
 
 	AddMovementInput(ForwardDirection, MovementVector.X);
 	AddMovementInput(RightDirection, MovementVector.Y);
-
-	if (bIsInteracting)
-	{
-		const FVector Start = GetActorLocation();
-		const FVector End = Start + GetActorForwardVector() * 100.f;
-
-		FHitResult HitResult;
-		bool bHit = UKismetSystemLibrary::LineTraceSingle(
-			GetWorld(),
-			Start,
-			End,
-			UEngineTypes::ConvertToTraceType(ECC_Visibility),
-			false,
-			TArray<AActor*>{this},
-			EDrawDebugTrace::ForDuration,
-			HitResult,
-			true
-		);
-
-		if (bHit)
-		{
-			AActor* HitActor = HitResult.GetActor();
-			if (HitActor)
-			{
-			}
-		}
-	}
 }
 
 void APlayerCharacter::Run(const FInputActionValue& Value)
@@ -88,5 +61,31 @@ void APlayerCharacter::Run(const FInputActionValue& Value)
 
 void APlayerCharacter::Interact(const FInputActionValue& Value)
 {
-	bIsInteracting = Value.Get<bool>();
+	const FVector Start = GetActorLocation();
+	const FVector End = Start + GetActorForwardVector() * 100.f;
+	
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_EngineTraceChannel3));
+
+	TArray<AActor*> ActorsToIgnore;
+	ActorsToIgnore.Add(this);
+
+	FHitResult HitResult;
+	UKismetSystemLibrary::LineTraceSingleForObjects(
+		GetWorld(),
+		Start,
+		End,
+		ObjectTypes,
+		false,
+		ActorsToIgnore,
+		EDrawDebugTrace::ForDuration,
+		HitResult,
+		true
+	);
+
+	AActor* HitActor = HitResult.GetActor();
+	if (HitActor)
+	{
+		UE_LOG(LogTemp, Log, TEXT("Hit Actor: %s"), *HitActor->GetName());
+	}
 }

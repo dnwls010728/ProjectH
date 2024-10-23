@@ -29,3 +29,4 @@ private:
 	UWorld* World_;
 	friend class AGMB;
 };
+

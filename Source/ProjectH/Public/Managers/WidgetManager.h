@@ -27,5 +27,5 @@ public:
 private:
 	UPROPERTY()
 	TObjectPtr<UWidgetAssets> PopupWidgets;
-
+	
 };

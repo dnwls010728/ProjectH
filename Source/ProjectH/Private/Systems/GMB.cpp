@@ -5,13 +5,18 @@
 
 AGMB* AGMB::Instance = nullptr;
 
+AGMB::AGMB() {
+	Instance = this;
+
+}
+
 void AGMB::InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) {
 	Super::InitGame(MapName, Options, ErrorMessage);
-	
 	Instance = this;
 	auto mgr = AGMB::GetManager();
-	mgr->SetWorld(GetWorld());
 	mgr->InitPlay();
+	mgr->SetWorld(GetWorld());
+
 }
 
 void AGMB::EndPlay(const EEndPlayReason::Type EndPlayReason) {

@@ -15,6 +15,7 @@ class PROJECTH_API AGMB : public AGameModeBase
 {
 	GENERATED_BODY()
 	static AGMB* Instance;
+	AGMB();
 protected:
 	virtual void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage);
 	

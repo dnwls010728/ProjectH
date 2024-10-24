@@ -6,6 +6,16 @@
 #include "Components/ActorComponent.h"
 #include "PlayerStateComponent.generated.h"
 
+UENUM()
+enum class State {
+	Idle,
+	Run,
+	Walk,
+	Contacting,
+	Holding,
+	Climbing
+};
+
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class PROJECTH_API UPlayerStateComponent : public UActorComponent
@@ -13,24 +23,13 @@ class PROJECTH_API UPlayerStateComponent : public UActorComponent
 	GENERATED_BODY()
 
 public:	
-	enum class State {
-		Idle,
-		Run,
-		Walk,
-		Contacting,
-		Holding,
-		Climbing
-	};
-	
 	UPlayerStateComponent();
 
 	inline const State& GetPlayerState() const {
 		return PState;
 	}
 
-	inline void SetPlayerState(const State& newState) {
-		PState = newState;
-	}
+	void SetPlayerState(const State& newState);
 
 
 
@@ -40,5 +39,6 @@ protected:
 
 
 private:
+	UPROPERTY(VisibleAnywhere)
 	State PState;
 };

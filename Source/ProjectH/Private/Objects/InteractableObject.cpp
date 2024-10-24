@@ -6,6 +6,8 @@
 #include "Components/CapsuleComponent.h"
 #include "Systems/GMB.h"
 #include "Widgets/Popup/PopupBase.h"
+#include "Components/PlayerStateComponent.h"
+#include "Character/PlayerCharacter.h"
 
 // Sets default values
 AInteractableObject::AInteractableObject()
@@ -26,6 +28,7 @@ void AInteractableObject::BeginPlay()
 	
 	Capsule->OnComponentBeginOverlap.AddDynamic(this, &AInteractableObject::OnOverlap);
 	Capsule->OnComponentHit.AddDynamic(this, &AInteractableObject::OnHit);
+	Capsule->OnComponentEndOverlap.AddDynamic(this, &AInteractableObject::EndOverlap);
 
 	switch(PType) {
 	case PassingType::Passable:
@@ -49,11 +52,15 @@ void AInteractableObject::Tick(float DeltaTime)
 }
 
 void AInteractableObject::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
-
+	Cast<APlayerCharacter>(OtherActor)->GetStateComponent()->SetPlayerState(State::Contacting);
 	
 }
 
 void AInteractableObject::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) {
+}
+
+void AInteractableObject::EndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) {
+	Cast<APlayerCharacter>(OtherActor)->GetStateComponent()->SetPlayerState(State::Idle);
 
 }
 

@@ -24,6 +24,7 @@ void AMovableObject::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor
 }
 
 void AMovableObject::EndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) {
+	Super::EndOverlap(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex);
 	//GEngine->AddOnScreenDebugMessage(-1, 1.5f, FColor::Cyan, FString(TEXT("Contact End")));
 
 	

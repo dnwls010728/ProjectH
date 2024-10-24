@@ -11,7 +11,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/PlayerStateComponent.h"
 
-using PlayerState = UPlayerStateComponent::State;
+
 
 APlayerCharacter::APlayerCharacter()
 {
@@ -28,6 +28,7 @@ APlayerCharacter::APlayerCharacter()
 	GetCapsuleComponent()->SetCollisionProfileName(TEXT("Player"));
 
 	State = CreateDefaultSubobject<UPlayerStateComponent>(TEXT("State"));
+	bIsRunning = false;
 }
 
 void APlayerCharacter::BeginPlay() {
@@ -62,28 +63,27 @@ void APlayerCharacter::Move(const FInputActionValue& Value)
 	AddMovementInput(ForwardDirection, MovementVector.X);
 	AddMovementInput(RightDirection, MovementVector.Y);
 
-	if(MovementVector != FVector2D::ZeroVector)
-		State->SetPlayerState(PlayerState::Walk);
-	else
-		State->SetPlayerState(PlayerState::Idle);
-	
+	if(State->GetPlayerState() == State::Contacting)
+		return;
+
+	if(MovementVector == FVector2D::ZeroVector) {
+		State->SetPlayerState(State::Idle);
+	}
+	else {
+		if(bIsRunning) {
+			State->SetPlayerState(State::Run);
+		}
+		else {
+			State->SetPlayerState(State::Walk);
+		}
+	}
 }
 
 void APlayerCharacter::Run(const FInputActionValue& Value)
 {
-	bool bIsRunning = Value.Get<bool>();
+	bIsRunning = Value.Get<bool>();
 	GetCharacterMovement()->MaxWalkSpeed = bIsRunning ? 600.f : 300.f;
 	
-	if(GetMovementComponent()->Velocity == FVector::ZeroVector)
-		State->SetPlayerState(PlayerState::Idle);
-	else {
-		if(bIsRunning) {
-			State->SetPlayerState(PlayerState::Run);
-		}
-		else {
-			State->SetPlayerState(PlayerState::Walk);
-		}
-	}
 }
 
 void APlayerCharacter::Interact(const FInputActionValue& Value)

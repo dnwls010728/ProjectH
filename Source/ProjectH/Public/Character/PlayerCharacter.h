@@ -53,4 +53,7 @@ protected:
 	
 	UPROPERTY(VisibleAnywhere)
 	TObjectPtr<UPlayerStateComponent> State;
+
+	UPROPERTY()
+	bool bIsRunning;
 };

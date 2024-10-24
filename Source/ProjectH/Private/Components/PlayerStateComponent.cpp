@@ -11,6 +11,10 @@ UPlayerStateComponent::UPlayerStateComponent()
 	PrimaryComponentTick.bCanEverTick = false;
 }
 
+void UPlayerStateComponent::SetPlayerState(const State& newState) {
+	PState = newState;
+}
+
 
 // Called when the game starts
 void UPlayerStateComponent::BeginPlay()

@@ -8,6 +8,7 @@
 
 class UInputAction;
 struct FInputActionValue;
+class UPlayerStateComponent;
 /**
  * 
  */
@@ -18,6 +19,12 @@ class PROJECTH_API APlayerCharacter : public ACharacterBase
 
 public:
 	APlayerCharacter();
+
+	inline const TObjectPtr<UPlayerStateComponent> GetStateComponent() const {
+		return State;
+	}
+
+	virtual void BeginPlay() override;
 
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
@@ -44,4 +51,6 @@ protected:
 	void Run(const FInputActionValue& Value);
 	void Interact(const FInputActionValue& Value);
 	
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<UPlayerStateComponent> State;
 };

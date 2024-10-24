@@ -9,6 +9,9 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/PlayerStateComponent.h"
+
+using PlayerState = UPlayerStateComponent::State;
 
 APlayerCharacter::APlayerCharacter()
 {
@@ -23,6 +26,13 @@ APlayerCharacter::APlayerCharacter()
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComponent"));
 	FollowCamera->SetupAttachment(CameraBoom);
 	GetCapsuleComponent()->SetCollisionProfileName(TEXT("Player"));
+
+	State = CreateDefaultSubobject<UPlayerStateComponent>(TEXT("State"));
+}
+
+void APlayerCharacter::BeginPlay() {
+	Super::BeginPlay();
+	
 }
 
 void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -51,12 +61,29 @@ void APlayerCharacter::Move(const FInputActionValue& Value)
 
 	AddMovementInput(ForwardDirection, MovementVector.X);
 	AddMovementInput(RightDirection, MovementVector.Y);
+
+	if(MovementVector != FVector2D::ZeroVector)
+		State->SetPlayerState(PlayerState::Walk);
+	else
+		State->SetPlayerState(PlayerState::Idle);
+	
 }
 
 void APlayerCharacter::Run(const FInputActionValue& Value)
 {
 	bool bIsRunning = Value.Get<bool>();
 	GetCharacterMovement()->MaxWalkSpeed = bIsRunning ? 600.f : 300.f;
+	
+	if(GetMovementComponent()->Velocity == FVector::ZeroVector)
+		State->SetPlayerState(PlayerState::Idle);
+	else {
+		if(bIsRunning) {
+			State->SetPlayerState(PlayerState::Run);
+		}
+		else {
+			State->SetPlayerState(PlayerState::Walk);
+		}
+	}
 }
 
 void APlayerCharacter::Interact(const FInputActionValue& Value)

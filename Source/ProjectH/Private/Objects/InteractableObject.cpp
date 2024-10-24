@@ -9,6 +9,7 @@
 
 // Sets default values
 AInteractableObject::AInteractableObject()
+	: PType(PassingType::None)
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
@@ -16,18 +17,28 @@ AInteractableObject::AInteractableObject()
 	RootComponent = Capsule;	
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(Capsule);
-	Mesh->SetCollisionProfileName(FName(TEXT("Interactable")));
-	Capsule->SetCollisionProfileName(FName(TEXT("Interactable")));
-
-	
 }
 
 // Called when the game starts or when spawned
 void AInteractableObject::BeginPlay()
 {
 	Super::BeginPlay();
+	
 	Capsule->OnComponentBeginOverlap.AddDynamic(this, &AInteractableObject::OnOverlap);
 	Capsule->OnComponentHit.AddDynamic(this, &AInteractableObject::OnHit);
+
+	switch(PType) {
+	case PassingType::Passable:
+	{
+		Mesh->SetCollisionProfileName(FName(TEXT("BlockAll")));
+		Capsule->SetCollisionProfileName(FName(TEXT("Passable")));
+	}
+	case PassingType::NonPassable:
+	{
+		Mesh->SetCollisionProfileName(FName(TEXT("BlockAll")));
+		Capsule->SetCollisionProfileName(FName(TEXT("NonPassable")));
+	}
+	}
 }
 
 // Called every frame

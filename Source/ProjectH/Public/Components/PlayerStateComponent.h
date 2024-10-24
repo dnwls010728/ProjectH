@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Objects/InteractableObject.h"
 #include "Components/ActorComponent.h"
 #include "PlayerStateComponent.generated.h"
 
@@ -30,7 +31,22 @@ public:
 	}
 
 	void SetPlayerState(const EState& newState);
+	FORCEINLINE void AddContactObject(TObjectPtr<AInteractableObject> target) {
+		Objects.Push(target);
+	}
 
+	FORCEINLINE void RemoveContactObject(TObjectPtr<AInteractableObject> target) {
+		Objects.Remove(target);
+	}
+
+	FORCEINLINE TObjectPtr<AInteractableObject> GetLastContactObject() {
+		if(Objects.Num() == 0) {
+			return nullptr;
+		}
+		else {
+			return Objects.Last();
+		}
+	}
 
 
 protected:
@@ -41,4 +57,6 @@ protected:
 private:
 	UPROPERTY(VisibleAnywhere)
 	EState PState;
+
+	TArray<TObjectPtr<AInteractableObject>> Objects;
 };

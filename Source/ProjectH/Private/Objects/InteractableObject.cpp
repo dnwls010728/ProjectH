@@ -53,7 +53,7 @@ void AInteractableObject::Tick(float DeltaTime)
 
 void AInteractableObject::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
 	Cast<APlayerCharacter>(OtherActor)->GetStateComponent()->SetPlayerState(EState::Contacting);
-	
+	Cast<APlayerCharacter>(OtherActor)->GetStateComponent()->AddContactObject(this);
 }
 
 void AInteractableObject::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) {
@@ -61,6 +61,6 @@ void AInteractableObject::OnHit(UPrimitiveComponent* HitComponent, AActor* Other
 
 void AInteractableObject::EndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) {
 	Cast<APlayerCharacter>(OtherActor)->GetStateComponent()->SetPlayerState(EState::Idle);
-
+	Cast<APlayerCharacter>(OtherActor)->GetStateComponent()->RemoveContactObject(this);
 }
 

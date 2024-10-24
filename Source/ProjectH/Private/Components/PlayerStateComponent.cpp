@@ -11,7 +11,7 @@ UPlayerStateComponent::UPlayerStateComponent()
 	PrimaryComponentTick.bCanEverTick = false;
 }
 
-void UPlayerStateComponent::SetPlayerState(const State& newState) {
+void UPlayerStateComponent::SetPlayerState(const EState& newState) {
 	PState = newState;
 }
 

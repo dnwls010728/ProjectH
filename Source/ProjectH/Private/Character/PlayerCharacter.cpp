@@ -63,18 +63,18 @@ void APlayerCharacter::Move(const FInputActionValue& Value)
 	AddMovementInput(ForwardDirection, MovementVector.X);
 	AddMovementInput(RightDirection, MovementVector.Y);
 
-	if(State->GetPlayerState() == State::Contacting)
+	if(State->GetPlayerState() == EState::Contacting)
 		return;
 
 	if(MovementVector == FVector2D::ZeroVector) {
-		State->SetPlayerState(State::Idle);
+		State->SetPlayerState(EState::Idle);
 	}
 	else {
 		if(bIsRunning) {
-			State->SetPlayerState(State::Run);
+			State->SetPlayerState(EState::Run);
 		}
 		else {
-			State->SetPlayerState(State::Walk);
+			State->SetPlayerState(EState::Walk);
 		}
 	}
 }

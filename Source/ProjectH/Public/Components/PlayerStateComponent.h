@@ -7,7 +7,7 @@
 #include "PlayerStateComponent.generated.h"
 
 UENUM()
-enum class State {
+enum class EState {
 	Idle,
 	Run,
 	Walk,
@@ -25,11 +25,11 @@ class PROJECTH_API UPlayerStateComponent : public UActorComponent
 public:	
 	UPlayerStateComponent();
 
-	inline const State& GetPlayerState() const {
+	inline const EState& GetPlayerState() const {
 		return PState;
 	}
 
-	void SetPlayerState(const State& newState);
+	void SetPlayerState(const EState& newState);
 
 
 
@@ -40,5 +40,5 @@ protected:
 
 private:
 	UPROPERTY(VisibleAnywhere)
-	State PState;
+	EState PState;
 };

@@ -3,6 +3,8 @@
 
 #include "Objects/Movable.h"
 
+#include "Components/ArrowComponent.h"
+
 // Sets default values
 AMovable::AMovable()
 {
@@ -12,6 +14,31 @@ AMovable::AMovable()
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	RootComponent = Mesh;
 
+}
+
+void AMovable::OnConstruction(const FTransform& Transform)
+{
+	Super::OnConstruction(Transform);
+
+	TArray<UArrowComponent*> ExistingArrows;
+	GetComponents<UArrowComponent>(ExistingArrows);
+
+	for (UArrowComponent* Arrow : ExistingArrows)
+	{
+		Arrow->DestroyComponent();
+	}
+
+	for (const auto& PushTransform : PushTransforms)
+	{
+		UArrowComponent* ArrowComponent = NewObject<UArrowComponent>(this);
+		ArrowComponent->SetupAttachment(RootComponent);
+		ArrowComponent->SetRelativeTransform(PushTransform);
+		ArrowComponent->RegisterComponent();
+	}
+}
+
+void AMovable::Hold()
+{
 }
 
 // Called when the game starts or when spawned

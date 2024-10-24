@@ -10,7 +10,7 @@
 #include "Kismet/KismetSystemLibrary.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/PlayerStateComponent.h"
-
+#include "Objects/Movable.h"
 
 
 APlayerCharacter::APlayerCharacter()
@@ -65,7 +65,7 @@ void APlayerCharacter::Move(const FInputActionValue& Value)
 
 	if(State->GetPlayerState() == EState::Contacting)
 		return;
-
+	
 	if(MovementVector == FVector2D::ZeroVector) {
 		State->SetPlayerState(EState::Idle);
 	}
@@ -113,7 +113,11 @@ void APlayerCharacter::Interact(const FInputActionValue& Value)
 	AActor* HitActor = HitResult.GetActor();
 	if (HitActor)
 	{
-		UE_LOG(LogTemp, Log, TEXT("Hit Actor: %s"), *HitActor->GetName());
+		AMovable* Movable = Cast<AMovable>(HitActor);
+		if (Movable)
+		{
+			Movable->Hold();
+		}
 	}
 
 	/*if(State->GetLastContactObject() != nullptr) {

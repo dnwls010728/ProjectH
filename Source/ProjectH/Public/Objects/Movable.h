@@ -14,6 +14,10 @@ class PROJECTH_API AMovable : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AMovable();
+	
+	virtual void OnConstruction(const FTransform& Transform) override;
+
+	void Hold();
 
 protected:
 	// Called when the game starts or when spawned

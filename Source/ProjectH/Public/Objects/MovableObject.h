@@ -15,6 +15,11 @@ class PROJECTH_API AMovableObject : public AInteractableObject
 	GENERATED_BODY()
 	AMovableObject();
 
+public:
+	virtual void Interact(TObjectPtr<APlayerCharacter> player) override;
+
+
+private:
 	virtual void BeginPlay() override;
 
 	UFUNCTION()

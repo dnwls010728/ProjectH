@@ -4,9 +4,18 @@
 #include "Objects/MovableObject.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "Character/PlayerCharacter.h"
+#include "Components/PlayerStateComponent.h"
 
 AMovableObject::AMovableObject() {
 	PType = PassingType::NonPassable;
+}
+
+void AMovableObject::Interact(TObjectPtr<APlayerCharacter> player) {
+	if(player->GetStateComponent()->GetPlayerState() != EState::Holding) {
+		player->GetStateComponent()->SetPlayerState(EState::Holding);
+		player->GetStateComponent()->GetLastContactObject()->AttachToActor(player, FAttachmentTransformRules::KeepWorldTransform);
+	}
 }
 
 void AMovableObject::BeginPlay() {

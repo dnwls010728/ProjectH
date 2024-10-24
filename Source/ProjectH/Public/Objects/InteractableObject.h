@@ -8,6 +8,7 @@
 
 class UCapsuleComponent;
 class UStaticMeshComponent;
+class APlayerCharacter;
 
 UCLASS()
 class PROJECTH_API AInteractableObject : public AActor
@@ -23,7 +24,8 @@ public:
 	// Sets default values for this actor's properties
 	AInteractableObject();
 
-
+	virtual void Interact(TObjectPtr<APlayerCharacter> player) {
+	};
 
 protected:
 	// Called when the game starts or when spawned

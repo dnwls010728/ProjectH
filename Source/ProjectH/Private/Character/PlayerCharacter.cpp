@@ -116,13 +116,10 @@ void APlayerCharacter::Interact(const FInputActionValue& Value)
 		UE_LOG(LogTemp, Log, TEXT("Hit Actor: %s"), *HitActor->GetName());
 	}
 
-	/*if(State->GetLastContactObject() != nullptr) {
-		if(State->GetPlayerState() != EState::Holding) {
-			State->SetPlayerState(EState::Holding);
-			State->GetLastContactObject()->AttachToActor(this, FAttachmentTransformRules::KeepWorldTransform);
-		}
+	if(State->GetLastContactObject() != nullptr) {
+		State->GetLastContactObject()->Interact(this);
 	}
 	else {
-		GEngine->AddOnScreenDebugMessage(-1, 1.5f, FColor::Cyan, FString(TEXT("Tello")));
-	}*/
+		GEngine->AddOnScreenDebugMessage(-1, 1.5f, FColor::Cyan, FString(TEXT("No Objects")));
+	}
 }
